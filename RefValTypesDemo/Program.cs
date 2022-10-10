@@ -1,5 +1,9 @@
 ﻿namespace RefValTypesDemo
 {
+    public class Person
+    {
+        public int Age;
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -15,6 +19,22 @@
             array2[0] = 0;
             //array1 and array2 have the same memory address, so any changes to the object on the heap will impact both of them.
             Console.WriteLine(String.Format("array1[0]: {0}, array2[0]: {0}", array1[0], array2[0]));
+
+            //////////////Part 2////////////////
+
+
+
+        }
+
+        public static void Increment(int number)
+        {
+            number += 10;
+        }
+
+        public static void MakeOld(Person person)
+        {
+            person.Age += 10;
         }
     }
+    
 }
