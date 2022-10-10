@@ -27,6 +27,12 @@
             //Because variable "number"'s value is not stored in memory when it passes through the Increment method, the changed value is destroyed (value type).
             Console.WriteLine(number);
 
+            var person = new Person() {Age= 20 };
+            MakeOld(person);
+            //Because the person variable is a reference type when it was passed through the MakeOld method, the method updated the Age parameter in the person object,
+            //rather than making a new instance of the object with the updated Age.
+            Console.WriteLine(person.Age);
+
         }
 
         public static void Increment(int number)
