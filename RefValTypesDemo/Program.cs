@@ -22,7 +22,10 @@
 
             //////////////Part 2////////////////
 
-
+            var number = 1;
+            Increment(number);
+            //Because variable "number"'s value is not stored in memory when it passes through the Increment method, the changed value is destroyed (value type).
+            Console.WriteLine(number);
 
         }
 
